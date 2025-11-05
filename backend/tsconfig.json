@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "rootDir": "src",
+    "outDir": "dist",
+     "baseUrl": "src",
+    "paths": {
+      "@services/*": ["services/*"],
+      "@repositories/*": ["repositories/*"],
+      "@models/*": ["models/*"],
+      "@registerAliases": ["registerAliases"]
+    },
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node"]},  
+  "include": ["src/**/*.ts"],
+}

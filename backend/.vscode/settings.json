@@ -1,0 +1,6 @@
+{
+  "azureFunctions.deploySubpath": "dist",
+  "azureFunctions.projectLanguage": "TypeScript",
+  "azureFunctions.projectRuntime": "~4",
+  "azureFunctions.preDeployTask": "npm run build"
+}
