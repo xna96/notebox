@@ -2,8 +2,9 @@
   "name": "notebox-backend",
   "version": "1.0.0",
   "description": "Azure Functions backend for Notebox",
+  
   "scripts": {
-    "build": "npm run clean && tsc && copyfiles -u 2 \"src/functions/**/function.json\" dist/ && xcopy dist\\functions\\* dist\\ /E /I /Y && rmdir /s /q dist\\functions && copyfiles host.json local.settings.json dist/",
+    "build": "npm run clean && tsc && copyfiles -u 2 \"src/functions/**/function.json\" dist/ && xcopy dist\\functions\\* dist\\ /E /I /Y && rmdir /s /q dist\\functions && copyfiles host.json local.settings.json package.json dist/",
     "watch": "tsc --watch",
     "clean": "npx rimraf dist",
     "prestart": "npm run clean && npm run build",
