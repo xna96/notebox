@@ -48,13 +48,14 @@ export async function analyzeNote(req: HttpRequest): Promise<HttpResponseInit> {
         ?.sort((a: EmotionScore, b: EmotionScore) => b.score - a.score)[0]?.label || "neutral";
 
     const emotionMap: Record<string, { color: string}> = {
-      joy: { color: "#ffd93dff"},
-      sadness: { color: "#5220e8ff"},
-      anger: { color: "#6f2e17ff"},
-      fear: { color: "#8711e8ff"},
-      love: { color: "#6BCB77"},
-      surprise: { color: "#FFB6C1" },
-      neutral: { color: "#B0BEC5" },
+      joy: { color: "#ffd21f"},
+      sadness: { color: "#3ddbe1"},
+      anger: { color: "#ff3131"},
+      fear: { color: "#5e17eb"},
+      love: { color: "#ff66c4"},
+      surprise: { color: "#8c52ff" },
+      neutral: { color: "#ff751f" },
+      digust: { color: "#5170ff" },
     };
 
     const { color } = emotionMap[emotion] || emotionMap.neutral;

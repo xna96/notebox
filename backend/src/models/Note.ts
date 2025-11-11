@@ -28,7 +28,7 @@ export function createNote(data: Partial<Note>): Note {
   }
 
   return {
-    id: Date.now().toString(),
+    id: data.id || crypto.randomUUID(),
     name: data.name!.trim(),
     message: data.message!.trim(),
     country: data.country!.trim(),

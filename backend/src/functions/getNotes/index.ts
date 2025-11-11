@@ -5,13 +5,13 @@ import { NoteService } from "@services/NoteService";
 export async function getNotes(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
   const service = new NoteService();
   const notes = await service.listNotes();
+  
   return {
     status: 200,
-    jsonBody: {
-                success: true,
-                count: notes.length,
-                data: notes
-            }
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(notes),
   };
 
 }
