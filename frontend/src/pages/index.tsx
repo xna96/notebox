@@ -18,7 +18,6 @@ export default function HomePage() {
 
       {/* The rest of your page (notes, scroll area, etc.) */}
       <main className="min-h-screen bg-white">
-        console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
       
       <NotesGrid refreshTrigger={refreshTrigger}/>
     </main>
