@@ -10,8 +10,6 @@ export default function NotesGrid({ refreshTrigger }: { refreshTrigger: boolean 
   const [loading, setLoading] = useState(true);
    const scrollContainerRef = useRef<HTMLDivElement>(null);
   
-  
-
   useEffect(() => {
     const fetchNotesWithColors = async () => {
       try {
@@ -84,7 +82,7 @@ export default function NotesGrid({ refreshTrigger }: { refreshTrigger: boolean 
         grid-flow-col
         gap-10 
         overflow-x-auto 
-                                            
+
         p-10 
         pt-4 
         snap-x 
