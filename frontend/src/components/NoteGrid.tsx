@@ -10,6 +10,7 @@ export default function NotesGrid({ refreshTrigger }: { refreshTrigger: boolean 
   const [loading, setLoading] = useState(true);
    const scrollContainerRef = useRef<HTMLDivElement>(null);
   
+   
   useEffect(() => {
     const fetchNotesWithColors = async () => {
       try {
