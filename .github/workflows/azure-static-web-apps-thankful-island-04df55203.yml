@@ -19,6 +19,12 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Create production environment file
+        run: |
+          cd frontend
+          echo "NEXT_PUBLIC_API_URL=https://notebox-backend.azurewebsites.net/api" > .env.production
+
           
 
       - name: Build And Deploy
